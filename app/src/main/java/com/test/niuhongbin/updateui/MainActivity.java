@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
         }
     };
 
-
+//    方法一
     private void handle1(){
         handler.post(new Runnable() {
             @Override
@@ -28,11 +28,12 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+//    方法二
     private void handle2(){
         handler.sendEmptyMessage(1);
     }
 
-
+//    方法三
     private void updateUI(){
          runOnUiThread(new Runnable() {
              @Override
@@ -42,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
          });
     }
 
+//    方法四
     private void viewUI(){
         tv.post(new Runnable() {
             @Override
